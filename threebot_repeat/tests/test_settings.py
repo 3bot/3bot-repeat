@@ -4,13 +4,10 @@ import logging
 
 DEBUG = True
 
-logging.getLogger("factory").setLevel(logging.WARN)
-
 SITE_ID = 1
 
 APP_ROOT = os.path.abspath(
     os.path.join(os.path.dirname(__file__), '..'))
-
 
 DATABASES = {
     'default': {
@@ -49,12 +46,10 @@ EXTERNAL_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     'django.contrib.sites',
-    'django_nose',
 ]
 
 INTERNAL_APPS = [
     'threebot_repeat',
-    'threebot_repeat.tests.test_app',
 ]
 
 INSTALLED_APPS = EXTERNAL_APPS + INTERNAL_APPS

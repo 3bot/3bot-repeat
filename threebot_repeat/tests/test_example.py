@@ -3,14 +3,7 @@ from django.test import TestCase
 
 
 class DummyModelTestCase(TestCase):
-
-    """Tests for the ``DummyModel`` model.
-
-    def setUp(self):
-        # self.obj = factories.DummyModelFactory()
+    """Tests for the ``DummyModel`` model."""
 
     def test_model(self):
-        # self.assertTrue(self.obj.pk)
         self.assertTrue(True)
-
-    """
