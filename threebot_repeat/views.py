@@ -4,8 +4,7 @@ from django.core.urlresolvers import reverse
 from django.db.models import Q
 from django.http import HttpResponseRedirect
 from django.http import Http404
-from django.shortcuts import render_to_response
-from django.template import RequestContext
+from django.shortcuts import render
 from django.utils import timezone
 
 from background_task.models import Task
@@ -18,7 +17,7 @@ def list(request, template_name='threebot_repeat/list.html'):
     kwvars = {
         'repetitive_tasks': repetitive_tasks,
     }
-    return render_to_response(template_name, kwvars, RequestContext(request))
+    return render(request, template_name, kwvars)
 
 
 @login_required
