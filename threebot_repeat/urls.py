@@ -1,11 +1,10 @@
 """URLs for the threebot_repeat app."""
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
 from threebot_repeat import views
 
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     url(r'^$',
         views.list,
         name='threebot_repeat_list'),
@@ -15,4 +14,4 @@ urlpatterns = patterns(
     url(r'^stop-repetition/(?P<bg_task_id>[-\d]+)/$',
         views.stop_repetition,
         name='threebot_replay_stop_repetition', ),
-)
+]
